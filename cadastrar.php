@@ -17,6 +17,5 @@ $stm->bindValue(4, $birth);
 
 $stm->execute();
 
-
-
+header('location: usuarios.php');
 ?>

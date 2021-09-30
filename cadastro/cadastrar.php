@@ -1,10 +1,10 @@
 <?php
-require('conexao.php');
+require('../conexao.php');
 
-$arquivo = $_FILES['arquivo'];
+$arquivo = $_FILES['photo'];
 
-$nomeArquivo = $_FILES['arquivo']['name'];
-$caminhoAtual = $_FILES['arquivo']['tmp_name'];
+$nomeArquivo = $_FILES['photo']['name'];
+$caminhoAtual = $_FILES['photo']['tmp_name'];
 $caminhoSalvar = 'images/'.$nomeArquivo;
 
 move_uploaded_file($caminhoAtual, $caminhoSalvar);
@@ -14,6 +14,7 @@ $phone = $_POST['phone'];
 $instagram = $_POST['instagram'];
 $birth = $_POST['birth'];
 $gender = $_POST['gender'];
+$terms = $_POST['terms'];
 
 $sql = 'INSERT INTO usuarios (photo, name, phone, instagram, birth, gender) VALUES (?, ?, ?, ?, ?, ?);';
 
@@ -25,9 +26,10 @@ $stm->bindValue(3, $phone);
 $stm->bindValue(4, $instagram);
 $stm->bindValue(5, $birth);
 $stm->bindValue(6, $gender);
+$stm->bindValue(6, $terms);
 
 $stm->execute();
 
-header('location: usuarios.php');
+header('location: ../usuarios.php');
 
 ?>

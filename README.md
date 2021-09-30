@@ -1,8 +1,13 @@
 # barbearia-php
 
-Cadastro cliente: nome, telefone, instagram, dataNascimento
+Cadastro cliente: 
+    -página de cadastro #ok
+
+Página de usuários:
+    -página que mostra todos os usuários cadastrados
 
 Página Tabela de Preços:
+    -página que mostra os serviços #ok
 
 Mini-sistema de Caixa: somatório de serviços e dizer o troco
 

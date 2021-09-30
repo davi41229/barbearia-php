@@ -14,7 +14,7 @@ $phone = $_POST['phone'];
 $instagram = $_POST['instagram'];
 $birth = $_POST['birth'];
 $gender = $_POST['gender'];
-$terms = $_POST['terms'];
+$terms = 'ajeitar'; #$_POST['terms'];
 
 $sql = 'INSERT INTO usuarios (photo, name, phone, instagram, birth, gender, terms) VALUES (?, ?, ?, ?, ?, ?, ?);';
 

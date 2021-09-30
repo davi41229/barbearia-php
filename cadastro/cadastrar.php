@@ -16,7 +16,7 @@ $birth = $_POST['birth'];
 $gender = $_POST['gender'];
 $terms = $_POST['terms'];
 
-$sql = 'INSERT INTO usuarios (photo, name, phone, instagram, birth, gender) VALUES (?, ?, ?, ?, ?, ?);';
+$sql = 'INSERT INTO usuarios (photo, name, phone, instagram, birth, gender, terms) VALUES (?, ?, ?, ?, ?, ?, ?);';
 
 $stm = $pdo->prepare($sql);
 
@@ -26,7 +26,7 @@ $stm->bindValue(3, $phone);
 $stm->bindValue(4, $instagram);
 $stm->bindValue(5, $birth);
 $stm->bindValue(6, $gender);
-$stm->bindValue(6, $terms);
+$stm->bindValue(7, $terms);
 
 $stm->execute();
 

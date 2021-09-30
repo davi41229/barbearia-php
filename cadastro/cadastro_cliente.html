@@ -74,30 +74,30 @@
     ==> rodapé com criadores facebook e instagram -->
 
 
-    <form class="row row-cols-lg-auto g-3 align-items-center">
+    <form action="cadastrar.php" method="POST" enctype="multipart/form-data" class="row row-cols-lg-auto g-3 align-items-center">
 
       <!-- INSERIR FOTO -->
       <div class="input-group mb-3">
         <label class="input-group-text" for="inputGroupFile01">Foto</label>
-        <input type="file" class="form-control" id="inputGroupFile01">
+        <input name="photo" type="file" class="form-control" id="inputGroupFile01">
       </div><br>
 
       <!-- INSERIR NOME -->
       <div class="input-group">
         <span class="input-group-text">Nome</span>
-        <input type="text" aria-label="First name" class="form-control">
+        <input name="name" type="text" aria-label="First name" class="form-control">
       </div><br>
 
       <!-- INSERIR TELEFONE -->
       <div class="input-group">
         <span class="input-group-text">Telefone</span>
-        <input type="text" aria-label="First name" class="form-control">
+        <input name="phone" type="text" aria-label="First name" class="form-control">
       </div><br>
 
       <!-- DATA DE NASCIMENTO -->
       <div class="input-group">
         <span class="input-group-text">Nascimento</span>
-        <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)">
+        <input name="birth" id="dtnasc" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)">
       </div><br>
 
       <!-- INSERIR INSTAGRAM-->
@@ -108,7 +108,7 @@
         
         <div class="input-group">
           <div class="input-group-text">@ Instagram</div>
-          <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+          <input name="instagram" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
         </div>
 
       </div><br>
@@ -118,10 +118,10 @@
 
         <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
         
-        <select class="form-select" id="inlineFormSelectPref">
-          <option selected>Sexo...</option>
-          <option value="1">Masculino</option>
-          <option value="2">Feminino</option>
+        <select name="gender" class="form-select" id="inlineFormSelectPref">
+          <option>Sexo...</option>
+          <option value="m">Masculino</option>
+          <option value="f">Feminino</option>
         </select>
 
       </div><br>
@@ -129,8 +129,8 @@
       <!-- BOTÂO ACEITAR OS TERMOS -->
       <div class="col-12">
         
-        <div class="form-check">        
-          <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+        <div class="form-check">
+          <input name="terms" class="form-check-input" type="checkbox" id="inlineFormCheck">
           <label class="form-check-label" for="inlineFormCheck">
             Aceito os Termos
           </label>

@@ -1,0 +1,15 @@
+@import url('https://fonts.google.com/css?family=Poppins:400,500,600,700&display=swap');
+/*COR DA PAGINA*/
+body{
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lobster', cursive;
+}
+.Usuarios_cadastrados{
+
+  /*margin: 0, auto;
+  padding: 10px;
+  margin-top: 10px;*/
+}
+span h1{
+  color: black;

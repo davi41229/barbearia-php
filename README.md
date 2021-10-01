@@ -4,7 +4,7 @@ Cadastro cliente:
     -página de cadastro #ok
 
 Página de usuários:
-    -página que mostra todos os usuários cadastrados
+    -página que mostra todos os usuários cadastrados #ok
 
 Página Tabela de Preços:
     -página que mostra os serviços #ok

@@ -82,7 +82,7 @@ $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
             
                 <div class="row">
                     <div class="col-lg-4">
-                        <a href="../usuario?id=<?php $um['id'] ?>"><img class="rounded-circle" class="img-responsive" src="../images/<?php echo $um['photo']; ?>" alt="Generic placeholder image" width="140" height="140"></a>
+                        <a href="../usuario?id=<?php echo $um['id'] ?>"><img class="rounded-circle" class="img-responsive" src="../images/<?php echo $um['photo']; ?>" alt="Generic placeholder image" width="140" height="140"></a>
                         <h2>Cliente <?php echo $um['id']; ?></h2>
                         <p><?php echo $um['name'] ?></p>
                     </div>

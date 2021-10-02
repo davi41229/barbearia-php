@@ -85,9 +85,11 @@ $usuario = $stm->fetchAll(PDO::FETCH_ASSOC);
     <center><span><h1>Perfil Do Cliente</h1></span></center>
     <!-- CLIENTES -->
 		<div class="Usuarios_cadastrados">
-				<!--CLIENTE_1  -->
+			
+        <!--CLIENTE_1  -->
 			<div class="row">
-          		<center><div class="col-lg-4">
+          	
+                <center><div class="col-lg-4">
 		            <img class="rounded-circle"class="img-responsive" src="../images/<?php echo $usuario[0]['photo'] ?>" alt="Generic placeholder image" width="340" height="340">
 		            <h2>Cliente <?php echo $usuario[0]['id'] ?></h2>
 		            <p><?php echo $usuario[0]['name'] ?></p>
@@ -95,7 +97,8 @@ $usuario = $stm->fetchAll(PDO::FETCH_ASSOC);
 		            <p><?php echo $usuario[0]['phone'] ?></p>
 		            <p><?php echo $usuario[0]['birth'] ?></p>
           		</div></center>
-          	</div>
+        
+            </div>
 
 	</body>
 </html>

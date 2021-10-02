@@ -5,7 +5,7 @@ $arquivo = $_FILES['photo'];
 
 $nomeArquivo = $_FILES['photo']['name'];
 $caminhoAtual = $_FILES['photo']['tmp_name'];
-$caminhoSalvar = 'images/'.$nomeArquivo;
+$caminhoSalvar = '../images/'.$nomeArquivo;
 
 move_uploaded_file($caminhoAtual, $caminhoSalvar);
 
@@ -30,6 +30,6 @@ $stm->bindValue(7, $terms);
 
 $stm->execute();
 
-header('location: ../usuarios.php');
+header('location: ../usuarios');
 
 ?>

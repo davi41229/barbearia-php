@@ -1,13 +1,21 @@
 # barbearia-php
 
 Cadastro cliente: 
-    -página de cadastro #ok
+    -página de cadastro cliente #ok
 
 Página de usuários:
     -página que mostra todos os usuários cadastrados #ok
 
 Página Tabela de Preços:
     -página que mostra os serviços #ok
+
+Cadastro serviço: 
+    -página de cadastro serviço
+
+Criar página início
+
+Criar página de login
+
 
 Mini-sistema de Caixa: somatório de serviços e dizer o troco
 

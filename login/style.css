@@ -1,0 +1,136 @@
+@charset "utf-8";
+/*CSS Document*/
+@import url('https://fonts.google.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+
+
+/*   login */
+
+#ativar {
+  display: block;
+  margin: 20px auto;
+}
+
+#modal h1 {
+  font-family: sans-serif;
+  margin: 0px 0px 20px;
+  color: rgba(245,255,250);
+  font-family: 'Lobster', cursive;
+}
+
+#modal label {
+  display: block;
+  font-family: 'Lobster', cursive;;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  color: rgba(245,255,250);
+}
+
+#modal input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: #f7f7f7;
+}
+
+#modal .btn a{
+position:relative;
+display: block;
+height: 70px;
+width: 100px;
+background:linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+text-align: center;
+border-radius: 10px;
+
+}
+#modal .btn a span{
+    height: 88%;
+    width: 96%;
+    background: #111;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    line-height: 62px;
+    color: #f5f5f5;;
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+}
+#modal .btn a:hover{
+    animation: animate 0.4s linear infinite;
+}
+@keyframes animate{
+    100%{
+        filter: hue-rotate(-360deg);
+    }
+}
+
+#modal {
+  padding: 30px;
+  background: rgba( 28,28,28);
+  border-radius: 10px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+#modal.animar {
+  animation-name: slide;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  /* animation: slide .3s forwards; */
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#load {
+  width: 20px;
+  height: 20px;
+  border: 10px solid;
+  border-radius: 50%;
+  border-top-color: transparent;
+  margin: 0 auto;
+  color:black;
+  animation: load 0.6s linear infinite;
+}
+
+@keyframes load {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadFrames {
+  0% {
+    transform: translate(0px) scale(0.5);
+  }
+  25% {
+    transform: translate(200px);
+  }
+  50% {
+    transform: translate(200px, -200px) scale(1.5);
+  }
+  75% {
+    transform: translate(0px, -200px);
+  }
+  100% {
+    transform: translate(0px) scale(0.5);
+  }
+}

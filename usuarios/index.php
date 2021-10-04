@@ -1,7 +1,7 @@
 <?php
 require('../conexao.php');
 
-$sql = $pdo->query('SELECT * FROM usuarios');
+$sql = $pdo->query('SELECT * FROM usuarios ORDER BY birth DESC');
 
 $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -85,9 +85,12 @@ $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
                         <a href="../usuario?id=<?php echo $um['id'] ?>"><img class="rounded-circle" class="img-responsive" src="../images/<?php echo $um['photo']; ?>" alt="Generic placeholder image" width="140" height="140"></a>
                         <h2>Cliente <?php echo $um['id']; ?></h2>
                         <p><?php echo $um['name'] ?></p>
+                        
                     </div>
+					<p><?php echo $um['birth'] ?></p>
                 </div>
 
+                
             <?php endforeach; ?>
 
         </div>

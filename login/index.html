@@ -27,17 +27,25 @@
 
 <body>
   <!--<button id="ativar">ativar</button>-->
+  <form action="login.php" method="post">
+  
+    <div id="modal" class="animar">
+      <h1>Login</h1>
 
-  <div id="modal" class="animar">
-    <h1>Login</h1>
-    <label>Nome</label>
-    <input type="text" />
-    <label>Email</label>
-    <input type="text" />
-    <div class="btn">
-            <a href="#"><span>Logar</span></a>
-        </div>
-  </div>
+      <label>Usuário</label>
+      <input name="user" type="text" />
+        
+      <label>Senha</label>
+      <input name="password" type="password" />
+        
+      <div class="btn">
+        <a href="#"><span><button type="submit">Logar</button></span></a>
+      </div>
+
+      <a href="../conta">Crie uma conta</a>
+    </div>
+  
+  </form>
 
   <div id="load"></div>
 

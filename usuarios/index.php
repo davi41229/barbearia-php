@@ -87,7 +87,11 @@ $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
                         <p><?php echo $um['name'] ?></p>
                         
                     </div>
+					<p><?php echo date('d-m') ?></p>
+					<p><?php echo date('d-m-Y') ?></p>
+					<p><?php echo strtotime(date('d-m-Y')) ?></p>
 					<p><?php echo $um['birth'] ?></p>
+					<p><?php echo strtotime($um['birth']) ?></p>
                 </div>
 
                 

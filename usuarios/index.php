@@ -87,11 +87,14 @@ $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
                         <p><?php echo $um['name'] ?></p>
                         
                     </div>
-					<p><?php echo date('d-m') ?></p>
-					<p><?php echo date('d-m-Y') ?></p>
-					<p><?php echo strtotime(date('d-m-Y')) ?></p>
-					<p><?php echo $um['birth'] ?></p>
-					<p><?php echo strtotime($um['birth']) ?></p>
+					<p class="day-today"><?php echo date('d') ?></p>
+					<p><?php echo date('m') ?></p>
+					<p>---------</p>
+					<p class="day-birth"><?php echo date('d', strtotime($um['birth'])) ?></p>
+					<p><?php echo date('m', strtotime($um['birth'])) ?></p>
+					<p><?php echo date('d-m-Y', strtotime($um['birth'])) ?></p>
+					<p class="dias"><?php echo strtotime($um['birth']) ?></p>
+
                 </div>
 
                 
@@ -99,6 +102,26 @@ $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
 
         </div>
 
+		<script>
+			const dayT = document.querySelector('.day-today').innerText;
+			const dayB = document.querySelector('.day-birth').innerText;
+			document.querySelector('.dias').innerHTML = dayT;
 
+			console.log('Hoje é dia ' + dayT);
+			console.log('Nasci dia ' + dayB);
+
+			if (dayT < dayB) {
+				console.log('Meu Aniversário está chegando 8) ' + dayT);
+			}
+
+			if (dayT > dayB) {
+				console.log('Meu Aniversário já passou :P ' + dayT);
+			}
+
+			if (dayT == dayB) {
+				console.log('Hoje é Meu Aniversário! ' + dayT);
+			}
+			
+		</script>
 	</body>
 </html>

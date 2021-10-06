@@ -86,3 +86,13 @@ border-radius: 10px;
         filter: hue-rotate(-360deg);
     }
 }
+
+
+footer ,h2{
+  background-color: white;
+  font-family: 'Lobster', cursive;
+
+}
+footer a img{
+  border-color: blue;
+}

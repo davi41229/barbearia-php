@@ -5,6 +5,7 @@
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+		<link rel="icon" href="../images/logo.jpeg">
 
 		<title>Cortes_BarberShop</title>
 
@@ -15,10 +16,63 @@
 			<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
+
+
+		<!-- NAVBAR -->
+    <nav class="navbar navbar-light bg-light fixed-top">
+      
+      <div class="container-fluid">
+        
+        <img class="rounded-circle" src="../images/logo.jpeg" alt="Generic placeholder image" width="80" height="80">
+        
+        <a class="navbar-brand" href="#">Status Barber Shop</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Barbearia</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          
+          <div class="offcanvas-body">
+            
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Fotos</a>
+                <a class="nav-link" href="#">Nossos Serviços</a>
+              </li>          
+            
+            </ul>
+
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+            </form>
+          
+          </div>
+      
+        </div>
+      
+      </div>
+
+    </nav>
+
+    <br><br><br><br>
+
+    
 			<!-- JUMBOTRON -->
 		<div class="jumbotron jumbotron-fluid">
 		  	<div class="container">
-				    <h1 class="display-4">BarberShop</h1>
+				    <h1 class="display-4"> Status BarberShop</h1>
 				    <p class="lead">Cortes Vip</p>
 
 							    <!-- CARDS -->
@@ -87,5 +141,12 @@
 			</p>
 		</div>
 
+
 	</body>
+
+
+<footer>
+      <img class="rounded-circle" src="../images/logo.jpeg" alt="Generic placeholder image" width="80" height="80">
+    </footer>
+	
 </html>

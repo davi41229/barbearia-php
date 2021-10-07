@@ -7,19 +7,19 @@ Página de usuários:
     -página que mostra todos os usuários cadastrados #ok
 
 Página Tabela de Preços:
-    -página que mostra os serviços #ok
+    -página que mostra os serviços #ok ...
+
+Criar página de login #ok
 
 Cadastro serviço: 
-    -página de cadastro serviço
+    -página de cadastro serviço #ok ...
 
-Criar página início
+Criar página início #ok ...
 
-Criar página de login
 
+Dizer o aniversário do cliente enviar mensagem corte gratuito #ok
 
 Mini-sistema de Caixa: somatório de serviços e dizer o troco
-
-Dizer o aniversário do cliente enviar mensagem corte gratuito
 
 Dizer qual cliente gastou mais enviar mensagem de ganho (sorteio)
 

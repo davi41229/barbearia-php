@@ -15,6 +15,8 @@ $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
 
+		<link rel="icon" href="../images/logo.jpeg">
+
 		<title>Clientes</title>
 
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -29,7 +31,7 @@ $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
 		
 			<div class="container-fluid">
 			
-				<img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
+				<img class="rounded-circle" src="../images/logo.jpeg" alt="Generic placeholder image" width="80" height="80">
 				
 				<a class="navbar-brand" href="#">Barbearia-Natal</a>
 				

@@ -76,10 +76,55 @@ $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     <center><span><h1>Clientes Cadastrados</h1></span></center>
     <!-- CLIENTES -->
+
+		<h3>Aniversariantes do Dia</h3>	
+
+		<br>
+
+		<div class="aniversariantes-do-dia">			
+			<?php foreach($usuarios as $um): ?>
+
+				<?php
+					if (date('d', strtotime($um['birth'])) == date('d')) {
+						echo '<img class="rounded-circle" class="img-responsive" src="../images/' .$um['photo']. '" alt="Generic placeholder image" width="140" height="140"><br>';
+						echo 'Hoje ' . $um['name'] . ' faz Aniversário!!! <br><br>';
+					}
+				?>
+
+			<?php endforeach; ?>
+		</div>
+		
+		<br><br>
+
+		<h3>Aniversariantes do Mês</h3>	
+		
+		<br>
+
+		<div class="aniversariantes-do-mes">			
+			<?php foreach($usuarios as $um): ?>
+
+				<?php
+					if ( date('m', strtotime($um['birth'])) == date('m')) {
+						echo '<br>';
+						echo '<img class="rounded-circle" class="img-responsive" src="../images/' .$um['photo']. '" alt="Generic placeholder image" width="140" height="140"><br>';
+
+						echo $um['name'] . ' é desse mês <br>';
+						echo 'Aniversário: ' . date('d-m', strtotime($um['birth'])) . '<br>';
+				
+					}
+				?>
+
+			<?php endforeach; ?>
+		</div>
+
+		<br><br>
+
+		<h3>Todos os usuários</h3>
+
 		<div class="Usuarios_cadastrados">
 
             <?php foreach($usuarios as $um): ?>
-            
+
                 <div class="row">
                     <div class="col-lg-4">
                         <a href="../usuario?id=<?php echo $um['id'] ?>"><img class="rounded-circle" class="img-responsive" src="../images/<?php echo $um['photo']; ?>" alt="Generic placeholder image" width="140" height="140"></a>
@@ -87,41 +132,11 @@ $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
                         <p><?php echo $um['name'] ?></p>
                         
                     </div>
-					<p class="day-today"><?php echo date('d') ?></p>
-					<p><?php echo date('m') ?></p>
-					<p>---------</p>
-					<p class="day-birth"><?php echo date('d', strtotime($um['birth'])) ?></p>
-					<p><?php echo date('m', strtotime($um['birth'])) ?></p>
-					<p><?php echo date('d-m-Y', strtotime($um['birth'])) ?></p>
-					<p class="dias"><?php echo strtotime($um['birth']) ?></p>
-
                 </div>
-
                 
             <?php endforeach; ?>
 
         </div>
 
-		<script>
-			const dayT = document.querySelector('.day-today').innerText;
-			const dayB = document.querySelector('.day-birth').innerText;
-			document.querySelector('.dias').innerHTML = dayT;
-
-			console.log('Hoje é dia ' + dayT);
-			console.log('Nasci dia ' + dayB);
-
-			if (dayT < dayB) {
-				console.log('Meu Aniversário está chegando 8) ' + dayT);
-			}
-
-			if (dayT > dayB) {
-				console.log('Meu Aniversário já passou :P ' + dayT);
-			}
-
-			if (dayT == dayB) {
-				console.log('Hoje é Meu Aniversário! ' + dayT);
-			}
-			
-		</script>
 	</body>
 </html>

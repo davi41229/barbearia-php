@@ -6,7 +6,7 @@ background-color: rgb(28,28,28);
 
 }
 /*FONTES DA PAGINA*/
-h1,h5,span,p{
+h1,a,h5,span,p{
 	color: black;
 	font-family: 'Lobster', cursive; 
 }
@@ -85,4 +85,14 @@ border-radius: 10px;
     100%{
         filter: hue-rotate(-360deg);
     }
+}
+
+
+footer ,h2{
+  background-color: white;
+  font-family: 'Lobster', cursive;
+
+}
+footer a img{
+  border-color: blue;
 }

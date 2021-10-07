@@ -3,20 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- FONTS DO GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+
+
+
+<!-- BOOTSTRAP CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS DA PAGINA -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Criar conta</title>
 </head>
 <body>
-    <h1>Criar Conta</h1>
 
-    <form action="conta.php" method="post">
-        <label for="">Usuário:</label>
-        <input type="text" name="user" id="">
-        
-        <label for="">Senha:</label>
-        <input type="password" name="password" id="">
+    <div id="modal" class="animar">
+    <h1>Criar conta</h1>
+    <label>Usuario</label>
+    <input type="text" />
+    <label>Senha</label>
+    <input type="text" />
+    <div class="btn">
+            <a href="#"><span>Criar</span></a>
+        </div>
+  </div>
 
-        <button type="submit">Criar</button>
-    </form>
+<br><br><br><br><br><br><br><br><br>
+
+
+  <footer>
+      <img class="rounded-circle" src="../images/logo.jpeg" alt="Generic placeholder image" width="80" height="80">
+    </footer>
+  
 </body>
 </html>

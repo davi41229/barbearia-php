@@ -5,6 +5,11 @@ $sql = $pdo->query('SELECT * FROM usuarios ORDER BY name DESC');
 
 $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
 
+
+$sql = $pdo->query('SELECT * FROM servicos ORDER BY name DESC');
+
+$servicos = $sql->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +23,7 @@ $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
     <form action="" method="get">
-        <select name="" id="">
+        <select name="usuario" id="">
             
             <?php foreach($usuarios as $um): ?>
 
@@ -28,6 +33,15 @@ $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
 
         </select>
 
+        <select name="servico" id="">
+            
+            <?php foreach($servicos as $um): ?>
+
+                <option value="<?php echo $um['id'] ?>"><?php echo $um['name'] ?></option>
+
+            <?php endforeach; ?>
+
+        </select>
 
     </form>
 </body>

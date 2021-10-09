@@ -22,7 +22,7 @@ $servicos = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     <link rel="icon" href="../images/logo.jpeg">
 
-    <title>Clientes</title>
+    <title>Compra</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,9 +35,9 @@ $servicos = $sql->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
 
-    <form action="compra.php" method="get">
+    <form action="compras.php" method="post">
         <h4>Cliente:</h4>
-        <select name="usuario" id="">
+        <select name="user_id" id="">
             
             <?php foreach($usuarios as $um): ?>
 
@@ -57,7 +57,7 @@ $servicos = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                 <div class="col-lg-4">
                     <img class="rounded-circle" class="img-responsive" src="../images/<?php echo $um['photo']; ?>" alt="Generic placeholder image" width="100" height="100">
-                    <p style="margin-left: 10px; font-size: 20px;"><?php echo $um['name']; ?> <input name="terms" value="<?php echo $um['name']; ?>" class="form-check-input" type="checkbox" id="inlineFormCheck"></p>
+                    <p style="margin-left: 10px; font-size: 20px;"><?php echo $um['name']; ?> <input name="servicos[]" value="<?php echo $um['name']; ?>,<?php echo $um['price']; ?>" class="form-check-input" type="checkbox" id="inlineFormCheck"></p>
                       
                 </div>
                 

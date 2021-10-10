@@ -24,19 +24,25 @@ foreach ($explode as $um) {
 
 print_r($explode);
 
+$soValores = [];
+
+/*$explode = array("laranja", "morango");
+array_push($cesta, "melancia", "batata");
+print_r($cesta);
+*/ 
 
 for ($i=0; $i < count($explode); $i++) { 
     echo "<br>item ".$i." ---> ".$explode[$i]."<br>";
 
     if ($i % 2 == 1) {
         echo $i." é impar<br>";
-    } else {
-        echo $i." é par<br>";
+        
+        array_push($soValores, $explode[$i]);
     }
 }
 
+print_r($soValores);
 
-$soValores = $explode;
 
 $sql = 'INSERT INTO compras (user_id, servicos, compra) VALUES (?, ?, ?);';
 

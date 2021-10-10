@@ -53,7 +53,7 @@ $valorTotal = array_reduce($soValores, "sum");
 
 if ($valorTotal > $pagamento) {
 
-    echo "<script language='Javascript'>window.location.href='caixa2.php'; alert('Pagamento Insuficiente!');</script>";
+    echo "<script language='Javascript'>window.location.href='../caixa'; alert('Pagamento Insuficiente!, Você comprou: ".$valorTotal." e pagou: ".$pagamento.", falta: ".$valorTotal - $pagamento."');</script>";
 
     exit();
 }

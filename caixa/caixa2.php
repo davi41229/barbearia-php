@@ -66,6 +66,9 @@ $servicos = $sql->fetchAll(PDO::FETCH_ASSOC);
         <?php endforeach; ?>
 
         <br>
+        
+        <label for="">Pagamento</label>
+        <input type="text" name="pagamento" id="">
 
         <button type="submit">Finalizar Compra</button>
 

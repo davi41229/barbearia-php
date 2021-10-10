@@ -4,6 +4,7 @@ require('../conexao.php');
 
 $user_id = $_POST['user_id'];
 $servicos = $_POST['servicos'];
+$pagamento = $_POST['pagamento'];
 
 $string = implode(",", $servicos); 
 
@@ -50,6 +51,12 @@ $valorTotal = array_reduce($soValores, "sum");
 #echo "<br>implodido ".$string."<br>";
 #echo "<br>compra: ".$valorTotal."<br>";
 
+if ($valorTotal > $pagamento) {
+
+    echo "<script language='Javascript'>window.location.href='caixa2.php'; alert('Pagamento Insuficiente!');</script>";
+
+    exit();
+}
 
 $sql = 'INSERT INTO compras (user_id, servicos, compra) VALUES (?, ?, ?);';
 
@@ -71,6 +78,12 @@ $stm->execute();
 
 $historicoCompras = $stm->fetchAll(PDO::FETCH_ASSOC);
 
-print_r($historicoCompras);
+#print_r($historicoCompras);
+
+echo "<br><br>Serviços: ".$historicoCompras[count($historicoCompras) -1]['servicos'];
+echo "<br><br>Compra: ".$historicoCompras[count($historicoCompras) -1]['compra'];
+
+echo "<br><br>Pagamento: ".$pagamento;
+echo "<br><br>Troco: ".$historicoCompras[count($historicoCompras) -1]['compra'] - $pagamento;
 
 ?>

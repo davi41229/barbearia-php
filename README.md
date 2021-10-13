@@ -19,7 +19,7 @@ Criar página início #ok ...
 
 Dizer o aniversário do cliente enviar mensagem corte gratuito #ok
 
-Mini-sistema de Caixa: somatório de serviços e dizer o troco
+Mini-sistema de Caixa: somatório de serviços e dizer o troco #ok
 
 Dizer qual cliente gastou mais enviar mensagem de ganho (sorteio)
 

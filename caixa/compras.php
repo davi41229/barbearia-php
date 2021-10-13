@@ -84,6 +84,7 @@ echo "<br><br>Serviços: ".$historicoCompras[count($historicoCompras) -1]['servi
 echo "<br><br>Compra: ".$historicoCompras[count($historicoCompras) -1]['compra'];
 
 echo "<br><br>Pagamento: ".$pagamento;
-echo "<br><br>Troco: ".$historicoCompras[count($historicoCompras) -1]['compra'] - $pagamento;
+echo "<br><br>Troco: ".$historicoCompras[count($historicoCompras) -1]['compra'] - $pagamento."<br><br>";
+
 
 ?>

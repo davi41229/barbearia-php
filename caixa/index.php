@@ -36,7 +36,9 @@ $servicos = $sql->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
     <form action="compras.php" method="post">
+        
         <h4>Cliente:</h4>
+
         <select name="user_id" id="">
             
             <?php foreach($usuarios as $um): ?>
@@ -56,6 +58,7 @@ $servicos = $sql->fetchAll(PDO::FETCH_ASSOC);
             <div class="row">                
 
                 <div class="col-lg-4">
+                    
                     <img class="rounded-circle" class="img-responsive" src="../images/<?php echo $um['photo']; ?>" alt="Generic placeholder image" width="100" height="100">
                     <p style="margin-left: 10px; font-size: 20px;"><?php echo $um['name']; ?> <input name="servicos[]" value="<?php echo $um['name']; ?>,<?php echo $um['price']; ?>" class="form-check-input" type="checkbox" id="inlineFormCheck"></p>
                       

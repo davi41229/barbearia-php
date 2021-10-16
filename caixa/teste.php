@@ -51,10 +51,10 @@ for ($i=0; $i < count($join); $i++) {
     
             if ($existe <= 0 && $join[$j]['name'] == $join[$i]['name']) {
             
-                echo "<br>".$join[$j]['name']." comprou ".$join[$j]['compra']."<br>";
+                #echo "<br>".$join[$j]['name']." comprou ".$join[$j]['compra']."<br>";
         
                 $somaCompras = $somaCompras + $join[$j]['compra'];
-                echo "<br>".$somaCompras."<br>";
+                #echo "<br>".$somaCompras."<br>";
             }
         
             $loops++;        
@@ -62,17 +62,24 @@ for ($i=0; $i < count($join); $i++) {
 
     }
 
-    echo "<br>Quantidade de  loops ".$loops."<br>";
-    echo "<br> Terminada volta ".$i." com a compra no total de ".$somaCompras." para ".$join[$i]['name']." com id: ".$join[$i]['user_id']."<br>";
+    #echo "<br>Quantidade de  loops ".$loops."<br>";
+    #echo "<br> Terminada volta ".$i." com a compra no total de ".$somaCompras." para ".$join[$i]['name']." com id: ".$join[$i]['user_id']."<br>";
+    
+    if ($somaCompras != 0) {
+
+        echo "<br> Terminada volta ".$i." com a compra no total de ".$somaCompras." para ".$join[$i]['name']." com id: ".$join[$i]['user_id']."<br>";
+        echo "<br> ------------------------------------------------------------------------------------------------------ <br>";
+    }
+
     
     $name = $join[$i]['name'];
-    echo "<br>".$name."<br>";
+    #echo "<br>".$name."<br>";
     
     array_push($names, $name);
-    echo "<br>".print_r($names)."<br>";
-    echo "<br>existe ".$existe."<br>";
-    echo "<br>noexiste ".$noexiste."<br>";
-    echo "<br> ------------------------------------------------------------------------------------------------------ <br>";
+    #echo "<br>".print_r($names)."<br>";
+    #echo "<br>existe ".$existe."<br>";
+    #echo "<br>noexiste ".$noexiste."<br>";
+    #echo "<br> ------------------------------------------------------------------------------------------------------ <br>";
 
 }
 

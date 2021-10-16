@@ -14,36 +14,52 @@ ON table1.column_name = table2.column_name;
 
 #print_r($join);
 #echo "<br><br>";
-/*
-foreach ($join as $um) {
-    echo "<br>".$um['name']." comprou ".$um['compra'].",00R$<br>";
-}
-*/
-$arrayCompras = [];
-$arrayUsuarios = [];
+
+
 $name = "";
+$names = [];
 
 for ($i=0; $i < count($join); $i++) { 
     
     $loops = 0;
     $somaCompras = 0;
     
+    if ($name != $join[$i]['name']) {
+        
+        #veja se $join[$i]['name'] já está no $names
+        
+        $existe = 0;
+        $noexiste = 0;
 
-    for ($j=0; $j < count($join); $j++) { 
+        for ($k=0; $k < count($names); $k++) { 
+            
+            if ($join[$i]['name'] == $names[$k]) {
 
-        if ($name != $join[$i]['name']) {
+                $existe++;
+            }
+            
+            if($join[$i]['name'] != $names[$k]) {
 
-            if ($join[$j]['name'] == $join[$i]['name']) {
-                echo "<br>".$join[$j]['name']." comprou ".$join[$j]['compra']."<br>";
-    
-                $somaCompras = $somaCompras + $join[$j]['compra'];
-                echo "<br>".$somaCompras."<br>";
+                $noexiste++;
             }
 
         }
-
-        $loops++;
         
+        #se não estiver faça:
+
+        for ($j=0; $j < count($join); $j++) {
+    
+            if ($existe <= 0 && $join[$j]['name'] == $join[$i]['name']) {
+            
+                echo "<br>".$join[$j]['name']." comprou ".$join[$j]['compra']."<br>";
+        
+                $somaCompras = $somaCompras + $join[$j]['compra'];
+                echo "<br>".$somaCompras."<br>";
+            }
+        
+            $loops++;        
+        }
+
     }
 
     echo "<br>Quantidade de  loops ".$loops."<br>";
@@ -52,13 +68,13 @@ for ($i=0; $i < count($join); $i++) {
     $name = $join[$i]['name'];
     echo "<br>".$name."<br>";
     
+    array_push($names, $name);
+    echo "<br>".print_r($names)."<br>";
+    echo "<br>existe ".$existe."<br>";
+    echo "<br>noexiste ".$noexiste."<br>";
+    echo "<br> ------------------------------------------------------------------------------------------------------ <br>";
 
-#    array_push($arrayCompras, [$join[$i]['name'] => $somaCompras]);
 }
-
-#print_r($arrayCompras);
-#print_r(rsort($arrayCompras));
-#print_r(usort($arrayCompras));
 
 
 

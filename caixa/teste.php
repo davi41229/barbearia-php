@@ -1,7 +1,7 @@
 <?php
 require('../conexao.php');
 
-$sql = $pdo->query('SELECT name, compra, user_id FROM usuarios LEFT JOIN compras ON usuarios.id = compras.user_id ;');
+$sql = $pdo->query('SELECT name, instagram, compra, user_id FROM usuarios LEFT JOIN compras ON usuarios.id = compras.user_id ;');
 
 $join = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -67,7 +67,8 @@ for ($i=0; $i < count($join); $i++) {
     
     if ($somaCompras != 0) {
 
-        echo "<br> Terminada volta ".$i." com a compra no total de ".$somaCompras." para ".$join[$i]['name']." com id: ".$join[$i]['user_id']."<br>";
+        #echo "<br> Terminada volta ".$i." com a compra no total de ".$somaCompras." para ".$join[$i]['name']." com id: ".$join[$i]['user_id']."<br>";
+        echo "<br>Cliente ".$join[$i]['name']." - ".$join[$i]['instagram']." está com o total de ".$somaCompras." em compras!<br>";
         echo "<br> ------------------------------------------------------------------------------------------------------ <br>";
     }
 

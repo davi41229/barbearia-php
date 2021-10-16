@@ -21,16 +21,28 @@
 </head>
 <body>
 
-    <div id="modal" class="animar">
-    <h1>Criar conta</h1>
-    <label>Usuario</label>
-    <input type="text" />
-    <label>Senha</label>
-    <input type="text" />
-    <div class="btn">
-            <a href="#"><span>Criar</span></a>
-        </div>
-  </div>
+    <form action="conta.php" method="post">
+
+        <div id="modal" class="animar">
+            <h1>Criar conta</h1>
+
+            <label>Usuario</label>
+            <input name="user" type="text" />
+
+            <label>Senha</label>
+            <input name="password" type="text" />
+
+            <!--<label>Repita a senha</label>
+            <input type="password" />-->
+
+            <div class="btn">
+                <a href=""><span><button type="submit">Criar</button></span></a>
+                </div>
+            </div>
+    
+        </form>
+
+    
 
 <br><br><br><br><br><br><br><br><br>
 
